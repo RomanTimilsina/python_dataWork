@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+    <p>Total Premium: {{ total_premium }}</p>
+    <p>Total Sum Assured: {{ total_sum_assured }}</p>
+    <ul>
+        {% for agent_code in agent_codes %}
+            <li>Agent Code: {{ agent_code.agent_code }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

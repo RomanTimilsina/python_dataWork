@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Detail Report</title>
+</head>
+<body>
+    <h1>Detail Report</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Batch ID</th>
+                <th>Agent Code</th>
+                <th>Premium</th>
+                <th>Sum Assured</th>
+                <th>Policy Issued Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for policy in policies %}
+            <tr>
+                <td>{{ policy.batch_id }}</td>
+                <td>{{ policy.agent_code }}</td>
+                <td>{{ policy.premium }}</td>
+                <td>{{ policy.sum_assured }}</td>
+                <td>{{ policy.policy_issued_date }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
